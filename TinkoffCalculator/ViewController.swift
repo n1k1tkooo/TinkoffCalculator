@@ -40,7 +40,9 @@ enum CalculationHistoryItem {
 }
 
 class ViewController: UIViewController {
-
+    
+    var lastCalculate: String = "NoData"
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else { return }
         
@@ -67,6 +69,7 @@ class ViewController: UIViewController {
         calculationHistory.removeAll()
         
         resetLabelText()
+//        lastCalculate = "NoData"
     }
     
     @IBAction func calculateButtonPressed() {
@@ -85,9 +88,24 @@ class ViewController: UIViewController {
             label.text = "Ошибка"
         }
         
+        lastCalculate = label.text ?? "NoData"
+        
+        if calculationHistory.count == 1 {
+            lastCalculate = "NoData"
+        }
+        
         calculationHistory.removeAll()
     }
     
+    @IBAction func showCalculationsList(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let calculationsListVC = sb.instantiateViewController(identifier: "CalculationsListViewController")
+        if let vc = calculationsListVC as? CalculationsListViewController {
+            vc.result = lastCalculate
+        }
+        
+        navigationController?.pushViewController(calculationsListVC, animated: true )
+    }
     
     @IBAction func operationButtonPressed(_ sender: UIButton) {
         guard 
@@ -125,6 +143,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         resetLabelText()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func calculate() throws -> Double {

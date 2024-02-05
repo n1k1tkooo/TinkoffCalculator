@@ -16,6 +16,7 @@
 		1357D3D62B66959E00A7707B /* TinkoffCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357D3D52B66959E00A7707B /* TinkoffCalculatorTests.swift */; };
 		1357D3E02B66959E00A7707B /* TinkoffCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357D3DF2B66959E00A7707B /* TinkoffCalculatorUITests.swift */; };
 		1357D3E22B66959E00A7707B /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357D3E12B66959E00A7707B /* TinkoffCalculatorUITestsLaunchTests.swift */; };
+		13D29BFC2B6C2F9400C4B276 /* CalculationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D29BFB2B6C2F9400C4B276 /* CalculationsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1357D3DB2B66959E00A7707B /* TinkoffCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1357D3DF2B66959E00A7707B /* TinkoffCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITests.swift; sourceTree = "<group>"; };
 		1357D3E12B66959E00A7707B /* TinkoffCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13D29BFB2B6C2F9400C4B276 /* CalculationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1357D3C72B66959D00A7707B /* Assets.xcassets */,
 				1357D3C92B66959D00A7707B /* LaunchScreen.storyboard */,
 				1357D3CC2B66959D00A7707B /* Info.plist */,
+				13D29BFB2B6C2F9400C4B276 /* CalculationsListViewController.swift */,
 			);
 			path = TinkoffCalculator;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D29BFC2B6C2F9400C4B276 /* CalculationsListViewController.swift in Sources */,
 				1357D3C32B66959800A7707B /* ViewController.swift in Sources */,
 				1357D3BF2B66959800A7707B /* AppDelegate.swift in Sources */,
 				1357D3C12B66959800A7707B /* SceneDelegate.swift in Sources */,
